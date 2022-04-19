@@ -1,81 +1,31 @@
-# `near-sdk-as` Starter Kit
+# Near Protocol Whitelist dApp
 
-This is a good project to use as a starting point for your AssemblyScript project.
+Welcome!
+This small project is written in Assemblyscript using Near Protocol Sample project. 
+The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol.
+Anyone can interact with the project by attaching 0.1 NEAR. 
+Everyon interacted with dapp will receive 0.2 when whitelist period is over.
 
-## Samples
 
-This repository includes a complete project structure for AssemblyScript contracts targeting the NEAR platform.
+## 
 
-The example here is very basic.  It's a simple contract demonstrating the following concepts:
-- a single contract
-- the difference between `view` vs. `change` methods
-- basic contract storage
-
-There are 2 AssemblyScript contracts in this project, each in their own folder:
-
-- **simple** in the `src/simple` folder
-- **singleton** in the `src/singleton` folder
-
-### Simple
-
-We say that an AssemblyScript contract is written in the "simple style" when the `index.ts` file (the contract entry point) includes a series of exported functions.
-
-In this case, all exported functions become public contract methods.
-
-```ts
-// return the string 'hello world'
-export function helloWorld(): string {}
-
-// read the given key from account (contract) storage
-export function read(key: string): string {}
-
-// write the given value at the given key to account (contract) storage
-export function write(key: string, value: string): string {}
-
-// private helper method used by read() and write() above
-private storageReport(): string {}
-```
 
 ### Singleton
-
-We say that an AssemblyScript contract is written in the "singleton style" when the `index.ts` file (the contract entry point) has a single exported class (the name of the class doesn't matter) that is decorated with `@nearBindgen`.
-
-In this case, all methods on the class become public contract methods unless marked `private`.  Also, all instance variables are stored as a serialized instance of the class under a special storage key named `STATE`.  AssemblyScript uses JSON for storage serialization (as opposed to Rust contracts which use a custom binary serialization format called borsh).
-
-```ts
-@nearBindgen
-export class Contract {
-
-  // return the string 'hello world'
-  helloWorld(): string {}
-
-  // read the given key from account (contract) storage
-  read(key: string): string {}
-
-  // write the given value at the given key to account (contract) storage
-  @mutateState()
-  write(key: string, value: string): string {}
-
-  // private helper method used by read() and write() above
-  private storageReport(): string {}
-}
-```
 
 
 ## Usage
 
 ### Getting started
 
-(see below for video recordings of each of the following steps)
-
 INSTALL `NEAR CLI` first like this: `npm i -g near-cli`
 
-1. clone this repo to a local folder
-2. run `yarn`
-3. run `./scripts/1.dev-deploy.sh`
-3. run `./scripts/2.use-contract.sh`
-4. run `./scripts/2.use-contract.sh` (yes, run it to see changes)
-5. run `./scripts/3.cleanup.sh`
+1. clone this repo to a local folder 
+2. git clone 
+3. run `yarn`
+4. run `./scripts/1.dev-deploy.sh`
+5. run `./scripts/2.use-contract.sh`
+6. run `./scripts/2.use-contract.sh` (yes, run it to see changes)
+7. run `./scripts/3.cleanup.sh`
 
 ### Videos
 
