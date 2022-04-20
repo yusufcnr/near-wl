@@ -8,10 +8,10 @@ User need to wait 10 minutes after the before they can get rewarded.
 
 ### Getting started
 
-## Get Near Protocol Testnet Account from:
+### Get Near Protocol Testnet Account from:
 https://wallet.testnet.near.org/
 
-## Install `NEAR CLI` in order to interact with Smart Contract like this:
+### Install `NEAR CLI` in order to interact with Smart Contract like this:
 
 `npm i -g near-cli`
 
