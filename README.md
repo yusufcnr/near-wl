@@ -5,14 +5,10 @@ This small project is written in Assemblyscript using Near Protocol Sample proje
 The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol.
 Anyone can interact with the project by attaching 0.1 NEAR. 
 Everyon interacted with dapp will receive 0.2 when whitelist period is over.
-
-##
+User need to wait 10 minutes after the before they can get rewarded.
 
 ## Interacting with smart contract
 near call $CONTRACT 
-
-
-### Singleton
 
 
 ## Usage
@@ -38,15 +34,7 @@ This video shows the build and deployment of the contract.
 
 This video shows contract methods being called.  You should run the script twice to see the effect it has on contract state.
 
-
-**`3.cleanup.sh`**
-
-This video shows the cleanup script running.  Make sure you add the `BENEFICIARY` environment variable. The script will remind you if you forget.
-
 ```sh
 export BENEFICIARY=<your-account-here>   # this account receives contract account balance
-```
-
-
-### Other documentation
+`
 
