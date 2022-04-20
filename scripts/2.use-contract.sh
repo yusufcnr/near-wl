@@ -17,28 +17,30 @@ echo
 echo ---------------------------------------------------------
 echo "Step 1: Call 'view' functions on the contract"
 echo
-echo "(run this script again to see changes made by this file)"
+echo "Call getListOfWhitelistedAddresses method in order to see the current whitelisted users."
+echo
+near view $CONTRACT getListOfWhitelistedAddresses
+
+echo
+echo "call getNumberOfList method to see the number of users already whitelisted."
+echo
+near view $CONTRACT getNumberOfList
+
 echo ---------------------------------------------------------
 echo
 
-near view $CONTRACT helloWorld
-
-echo
-echo
-
-near view $CONTRACT read '{"key":"some-key"}'
 
 echo
 echo
 echo ---------------------------------------------------------
 echo "Step 2: Call 'change' functions on the contract"
 echo ---------------------------------------------------------
-echo
+echo "call interact method to interact with smart contract in order to get in the whitelist. "
 
-# the following line fails with an error because we can't write to storage without signing the message
-# --> FunctionCallError(HostError(ProhibitedInView { method_name: "storage_write" }))
-# near view $CONTRACT write '{"key": "some-key", "value":"some value"}'
-near call $CONTRACT write '{"key": "some-key", "value":"some value"}' --accountId $CONTRACT
+echo "make sure to attach 0.1 NEAR < --amount 0.1 >" 
+
+
+near call $CONTRACT interact  --amount 0.1 --accountId $CONTRACT
 
 echo
 echo "now run this script again to see changes made by this file"
