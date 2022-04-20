@@ -51,9 +51,3 @@ Run this command to interact with smart contract:
 (Note that this function can be called only by predefined owner.)
 
 `near call $CONTRACT sendRewards --accountId ycfinans.testnet`
-  
-
-
-
-
-
