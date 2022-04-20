@@ -31,6 +31,7 @@ or basically run 1.dev-deploy.sh script like this:
 ## Interacting with smart contract
 Interacting with smart contract requires user to attach 0.1 NEAR in order to get in the whitelist.
 Run this command to interact with smart contract:
+
 `near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT.testnet>`
 
 
