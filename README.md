@@ -12,9 +12,14 @@ Before getting started we need to get a testnet account from Near Protocol in or
 ### Get Near Protocol Testnet Account from:
 https://wallet.testnet.near.org/
 
-## install dependencies from packacge.json file like this:
+## install dependencies from packacge.json file like this: (Reuire yarn installed)
+Install yarn (package manager) from terminal like this: 
 
-`npm install`
+`sudo apt install yarn`
+
+Then istall dependencies and node modules using yarn package manager :
+
+`yarn`
 
 ### Install `NEAR CLI` in order to interact with Smart Contract like this:
 
