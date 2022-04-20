@@ -7,6 +7,7 @@ Everyon interacted with dapp will receive 0.2 when whitelist period is over.
 User need to wait 10 minutes after the before they can get rewarded.
 
 ### Getting started
+Before getting started we need to get a testnet account from Near Protocol in order to interact smart contracts.
 
 ### Get Near Protocol Testnet Account from:
 https://wallet.testnet.near.org/
