@@ -85,4 +85,3 @@ export function getContractName ():string {
   return context.contractName;
 }
 
-//This is actually my first working smart contract built by me.
