@@ -1,5 +1,4 @@
 # Near Protocol Whitelist dApp
-
 Welcome!
 This small project is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol.
@@ -9,12 +8,16 @@ User need to wait 10 minutes after the before they can get rewarded.
 
 ### Getting started
 
-INSTALL `NEAR CLI` first like this:
+## Get Near Protocol Testnet Account from:
+https://wallet.testnet.near.org/
+
+## Install `NEAR CLI` in order to interact with Smart Contract like this:
+
 `npm i -g near-cli`
 
+### Check if NEAR CLI is installed properly like this:
 
-near call $CONTRACT 
-
+`near --version`
 
 1. clone this repo to a local folder git clone https://github.com/yusufcnr/transfers.git
 2. run `yarn build:release`
@@ -33,5 +36,22 @@ Interacting with smart contract requires user to attach 0.1 NEAR in order to get
 Run this command to interact with smart contract:
 
 `near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT.testnet>`
+
+## Check whether you are whitelisted or not:
+`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
+
+## Check number of whitelisted addresses:
+`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
+## Retrieve the list of whitelisted addresses:
+`near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT.testnet>`
+
+## Send rewards to whitelisted wallets after the whitelisting process is over:
+(Note that this function can be called only by predefined owner.)
+
+`near call $CONTRACT sendRewards --accountId ycfinans.testnet`
+  
+
+
+
 
 
