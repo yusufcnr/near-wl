@@ -7,6 +7,10 @@ Maximum number of the whitelisted wallets is limited to 10.
 Everyone interacted with dapp will receive 0.2 when whitelist period is over.
 User need to wait 30 days after the before they can call getRewards method to get their rewards.
 
+#### Patika.dev session for this prject is : 
+
+https://app.patika.dev/courses/near-developer-course/submit-your-project-plan
+
 ### Getting started
 Before getting started we need to get a testnet account from Near Protocol in order to interact smart contracts.
 
@@ -77,4 +81,3 @@ Run this command to interact with smart contract:
 
 `near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
 
-Patika.dev session for this prject is (https://app.patika.dev/courses/near-developer-course/submit-your-project-plan)
