@@ -1,73 +1,86 @@
-import { math, PersistentDeque, PersistentUnorderedMap, PersistentVector, ContractPromiseBatch, context, u128, PersistentSet, Context} from "near-sdk-as";
+import { ContractPromiseBatch, context, u128, PersistentSet } from "near-sdk-as";
 
 
 // const whitelistedAddresses = new PersistentUnorderedMap<string,boolean>("whitelist");
 const whitelistedAddresses = new PersistentSet<string>("wl");
+const rewardedWallets = new PersistentSet<string>("rw")
+
+//We will limit maximumun number of the users to be whitelisted in order to reward early supporters of the platform.
 
 const MAX_USER_= 10;
-const owner:string = "ycfinans.testnet" //for reward sending.
+const OWNER_:string ="cnr.testnet" 
 
+//Deployment timestamp will be used to require user to wait 30 days after interact with smart contract 
+const deployTimeStamp_nanoSeconds = context.blockTimestamp; 
+const stakingPeriod_day = 30;
+const stakingPeriod_in_nanosec = 30 * 24 * 60 * 60 * 1000000000;
 
-@nearBindgen 
-export class WhiteListedAddressess {
+//This is the main function our early users interact with our smart conract in order to get whitelisted.
 
-wallet:string;
-
-constructor (wallet:string) {
-  this.wallet = wallet;
-}
-}
 export function interact (wallet:string = context.sender): string {
-assert(whitelistedAddresses.size < MAX_USER_, "Too many users");
-assert(whitelistedAddresses.has(context.sender) == false, "already interacted.");
-assert(context.attachedDeposit == u128.from('100000000000000000000000'), "Please attach 0.1 NEAR to interact with this smart contract!");
+assert(whitelistedAddresses.size < MAX_USER_, "Limit of number of users to be whitelisted is reached!");
+assert(whitelistedAddresses.has(context.sender) == false, "You have already interacted with our smart conract! there is nothing to do now. just wait for future surprises");
+
+//We are asking users to send 0.1 NEAR to our contract in order to get whitelisted in orer to limit filter airdrop hunters 
+assert(context.attachedDeposit == u128.from('100000000000000000000000'), "Please attach 0.1 NEAR to interact with this smart contract in order to get whitelisted!"); 
+
+//Add user to the whitelist
 whitelistedAddresses.add(context.sender);
-return "interacted";
+return "You have interacted with our whitelist smart contract so wait for future surprises. ";
 }
+
+//Check the status of your wallet, whether it is whitelisted or not by calling checkWhitelistStatus method
 
 export function checkWhitelistStatus () :string {
-// export function checkWhitelistStatus (wallet:string) :string {
 
 if (whitelistedAddresses.has(context.sender) == false) {
-  return "your wallet is not whitelisted!";
+
+  return "your wallet is not whitelisted, please interact with our smsart contract in order to get whitelisted!";
 } 
-return "you wallet is whitelisted";
+return "you wallet is whitelisted so wait for future surprises. WAGMI!";
 }
 
+//Check the number of addresses whitelisted so far calling getNumberOfList method.
 
 export function getNumberOfList():u32 {
   return whitelistedAddresses.size;
 }
 
+//Check all the addresses whitelisted so far calling getListOfWhitelistedAddresses method.
 export function getListOfWhitelistedAddresses (): Array<string> {
   return whitelistedAddresses.values();
 }
 
 
-export function sendRewards ():void {
-  const alici:string ="cnr.testnet"
-  assert(Context.sender == owner, "Only owner can call this function");
+export function getRewards (receiver:string = context.sender):string {
 
-ContractPromiseBatch.create(alici).transfer(u128.from('200000000000000000000000'));
+  waitThirtyDays();
+
+  assert(whitelistedAddresses.has(context.sender), "You are not whitelisted! Only early supporters interacted with smart conract gets rewarded!")
+  assert(rewardedWallets.has(receiver) == false, "You have already received your reward! but nice try btw.");
+
+  // Send 0.2 NEAR to everyone who has interacted with the smart contract and got whitelisted.
+
+  ContractPromiseBatch.create(receiver).transfer(u128.from('200000000000000000000000'));
+  rewardedWallets.add(receiver);
+
+  return receiver + " has been rewaded 0.2 NEAR for interaction with the smart contract and support us to make e debut!"
 
 }
 
-//Require users to wait 1 month after interaction.
+//We do not want our smart contract get out of money instantly. we require users to wait 1 month after interaction for getting the rewards.
 
-export function month ():u64 {
-  const now:u64 = 1650419654274977178;
-  assert(context.blockTimestamp >= now + 10419654274977178, "You need to wait 1 mont after interaction.");
-  return Context.blockTimestamp;
+
+
+
+export function waitThirtyDays ():void {
+
+  assert(context.blockTimestamp >= deployTimeStamp_nanoSeconds + stakingPeriod_in_nanosec, "You need to wait 30 days to get your rewards after interaction with the contract.");
 }
 
-// let numberofAddressWhitelisted:i32 = whitelistedAddresses.size;
+//This method can be used to retrieve the name of the contract that is deployed to the blockchain.
 
-//   assert((whitelistedAddresses.getSome(context.sender) == null), "Already signed up");
-//   assert(numberofAddressWhitelisted < MAX_USER_, "Too many users");
-//   assert(context.attachedDeposit == u128.from('100000000000000000000000'),  "Please attach 0.1 NEAR"); // we need to send predefined aomunt of NEAR in order to get in the list.
-//   whitelistedAddresses.set(context.sender, true);
-//   numberofAddressWhitelisted += 1;
-//   let retValue: boolean = whitelistedAddresses.getSome(context.sender);
-//   return retValue;
+export function getContractName ():string {
+  return context.contractName;
+}
 
-// }
