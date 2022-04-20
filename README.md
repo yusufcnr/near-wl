@@ -74,9 +74,9 @@ Run this command to interact with smart contract:
 
 `near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT.testnet>`
 
-## Anyone interacted with contract can call the method to get their rewards after the whitelising process is over and 30 days elasped.:
+### Anyone interacted with contract can call the method to claim their rewards after the whitelising process is over and 30 days later.
 
-`near call $CONTRACT getRewards --accountId <YOUR_ACCOUNT.testnet>`
+`near call $CONTRACT claimRewards --accountId <YOUR_ACCOUNT.testnet>`
 
 ## Retrieve name of the contract by calling getContractName
 
