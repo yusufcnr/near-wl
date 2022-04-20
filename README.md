@@ -1,4 +1,4 @@
-# Near Protocol Whitelist dApp
+# Whitelist dApp Near Protocol WHIT3E
 Welcome!
 This small project is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol for their early support.
@@ -76,3 +76,5 @@ Run this command to interact with smart contract:
 ## Retrieve name of the contract by calling getContractName
 
 `near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
+
+Patika.dev session for this prject is (https://app.patika.dev/courses/near-developer-course/submit-your-project-plan)
