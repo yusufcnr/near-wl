@@ -12,6 +12,10 @@ Before getting started we need to get a testnet account from Near Protocol in or
 ### Get Near Protocol Testnet Account from:
 https://wallet.testnet.near.org/
 
+## install dependencies from packacge.json file like this:
+
+`npm install`
+
 ### Install `NEAR CLI` in order to interact with Smart Contract like this:
 
 `npm i -g near-cli`
