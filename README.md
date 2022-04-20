@@ -19,9 +19,10 @@ https://wallet.testnet.near.org/
 
 `near --version`
 
-1. clone this repo to a local folder git clone https://github.com/yusufcnr/transfers.git
-2. run `yarn build:release`
-3. run `near dev-delpoy ./build/release/simple.wasm`
+1. clone this repo to a local folder:  
+3. `git clone https://github.com/yusufcnr/transfers.git`
+4. run `yarn build:release`
+5. run `near dev-delpoy ./build/release/simple.wasm`
 
 or basically run 1.dev-deploy.sh script like this:
 `./scripts/1.dev-deploy.sh`
