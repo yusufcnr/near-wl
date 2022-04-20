@@ -1,6 +1,5 @@
 import { ContractPromiseBatch, context, u128, PersistentSet } from "near-sdk-as";
 
-
 // const whitelistedAddresses = new PersistentUnorderedMap<string,boolean>("whitelist");
 const whitelistedAddresses = new PersistentSet<string>("wl");
 const rewardedWallets = new PersistentSet<string>("rw")
@@ -51,7 +50,6 @@ export function getListOfWhitelistedAddresses (): Array<string> {
   return whitelistedAddresses.values();
 }
 
-
 export function getRewards (receiver:string = context.sender):string {
 
   waitThirtyDays();
@@ -69,9 +67,6 @@ export function getRewards (receiver:string = context.sender):string {
 }
 
 //We do not want our smart contract get out of money instantly. we require users to wait 1 month after interaction for getting the rewards.
-
-
-
 
 export function waitThirtyDays ():void {
 
