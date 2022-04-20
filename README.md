@@ -69,9 +69,9 @@ Run this command to interact with smart contract:
 
 `near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT.testnet>`
 
-## Send rewards to whitelisted wallets after the whitelisting process is over:
+## Anyone interacted with contract can call the method to get their rewards after the whitelising process is over and 30 days elasped.:
 
-`near call $CONTRACT sendRewards --accountId ycfinans.testnet`
+`near call $CONTRACT getRewards --accountId <YOUR_ACCOUNT.testnet>`
 
 ## Retrieve name of the contract by calling getContractName
 
