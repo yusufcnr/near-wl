@@ -42,21 +42,20 @@ or basically run 1.dev-deploy.sh script like this:
 
 ## Usage
 
-## Interacting with smart contract
+## First interaction with smart contract
 Interacting with smart contract requires user to attach 0.1 NEAR in order to get in the whitelist.
 Run this command to interact with smart contract:
 
-`near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT.testnet>`
+`near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT_ID>`
 
 ## Check whether you are whitelisted or not:
-`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
+`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT_ID>`
 
 ## Check number of whitelisted addresses:
-`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
+`near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT_ID>`
 ## Retrieve the list of whitelisted addresses:
-`near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT.testnet>`
+`near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT_ID>`
 
-## Send rewards to whitelisted wallets after the whitelisting process is over:
-(Note that this function can be called only by predefined owner.)
+## receive your reward for being early supporter, after the whitelisting process is over:
 
-`near call $CONTRACT sendRewards --accountId ycfinans.testnet`
+`near call $CONTRACT getRewards --accountId <YOUR_ACCOUNT_ID>` 
