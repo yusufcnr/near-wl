@@ -82,4 +82,4 @@ Run this command to interact with smart contract:
 
 `near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
 
-
+Loom video link will be added here.
