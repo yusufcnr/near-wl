@@ -50,7 +50,7 @@ export function getListOfWhitelistedAddresses (): Array<string> {
   return whitelistedAddresses.values();
 }
 
-export function getRewards (receiver:string = context.sender):string {
+export function claimRewards (receiver:string = context.sender):string {
 
   waitThirtyDays();
 
