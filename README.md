@@ -78,6 +78,8 @@ Run this command to interact with smart contract:
 
 `near call $CONTRACT claimRewards --accountId <YOUR_ACCOUNT.testnet>`
 
-## Retrieve name of the contract by calling getContractName
+## get name of the contract by calling getContractName
 
 `near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
+
+
