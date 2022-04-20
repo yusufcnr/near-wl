@@ -8,7 +8,7 @@ const rewardedWallets = new PersistentSet<string>("rw")
 //We will limit maximumun number of the users to be whitelisted in order to reward early supporters of the platform.
 
 const MAX_USER_= 10;
-const OWNER_:string ="cnr.testnet" 
+const OWNER_:string ="hi.cnr.testnet" 
 const BENEFICIARY:string = "cnr.testnet"
 
 //Deployment timestamp will be used to require user to wait 30 days after interact with smart contract 
@@ -53,7 +53,7 @@ export function getListOfWhitelistedAddresses (): Array<string> {
 }
 
 
-export function getRewards (receiver:string = context.sender):string {
+export function claimRewards (receiver:string = context.sender):string {
 
   waitThirtyDays();
 
