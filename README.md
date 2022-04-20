@@ -1,4 +1,4 @@
-# Whitelist dApp Near Protocol WHIT3E
+# Near Protocol Whitelist dApp WHIT3
 Welcome!
     This small project is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol for their early support.
