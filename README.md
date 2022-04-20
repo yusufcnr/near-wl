@@ -1,11 +1,12 @@
 # Whitelist dApp Near Protocol WHIT3E
 Welcome!
-This small project is written in Assemblyscript using Near Protocol Sample project. 
+    This small project is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol for their early support.
-Anyone can interact with the project by attaching 0.1 NEAR. 
-Maximum number of the whitelisted wallets is limited to 10.
-Everyone interacted with dapp will receive 0.2 when whitelist period is over.
-User need to wait 30 days after the before they can call getRewards method to get their rewards.
+
+    Anyone can interact with the project by attaching 0.1 NEAR. 
+    Maximum number of the whitelisted wallets is limited to 10.
+    Everyone interacted with dapp will receive 0.2 when whitelist period is over.
+    User need to wait 30 days after the before they can call getRewards method to get their rewards.
 
 #### Patika.dev session for this prject is : 
 
