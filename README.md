@@ -81,3 +81,5 @@ Run this command to interact with smart contract:
 ## Retrieve name of the contract by calling getContractName
 
 `near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
+
+Loom video for the contract will be added soon here.
