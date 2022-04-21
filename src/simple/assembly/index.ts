@@ -5,7 +5,7 @@ const whitelistedAddresses = new PersistentSet<string>("wl");
 const rewardedWallets = new PersistentSet<string>("rw")
 
 //maximumun number of the users to be whitelisted
-const MAX_USER_= 10;
+const MAX_USER_= 100;
 
 const OWNER_:string ="cnr.testnet" 
 
