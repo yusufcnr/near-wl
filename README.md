@@ -23,7 +23,7 @@ Before getting started we need to get a testnet account from Near Protocol in or
 
 https://wallet.testnet.near.org/
 
-## install dependencies from packacge.json file like this: (Reuire yarn installed)
+## install dependencies from packacge.json file like this: (Requires yarn installed)
 
 Install yarn (package manager) from terminal like this: 
 
