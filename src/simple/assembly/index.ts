@@ -16,22 +16,22 @@ const stakingPeriod_day = 30;
 const stakingPeriod_in_nanosec = 30 * 24 * 60 * 60 * 1000000000;
 
 
-//This is the main function our early users interact with our smart conract in order to get whitelisted.
+//Function to interact with the smart conract in order to get whitelisted.
 
 export function interact (wallet:string = context.sender): string {
 assert(whitelistedAddresses.size < MAX_USER_, "Limit of number of users to be whitelisted is reached!");
-assert(whitelistedAddresses.has(context.sender) == false, "You have already interacted with our smart conract! there is nothing to do now. just wait for future surprises");
+assert(whitelistedAddresses.has(context.sender) == false, "You have already interacted with our smart conract!");
 
 
-//We are asking users to send 0.1 NEAR to our contract in order to get whitelisted
-assert(context.attachedDeposit == u128.from('100000000000000000000000'), "Please attach 0.1 NEAR to interact with this smart contract in order to get whitelisted!"); 
+//Ask users to attach 0.1 NEAR to our contract in order to get whitelisted.
+assert(context.attachedDeposit == u128.from('100000000000000000000000'), "Please attach 0.1 NEAR to interact and to get in WL"); 
 
 //Add user to the whitelist
 whitelistedAddresses.add(context.sender);
 return "You have interacted with our whitelist smart contract so wait for future surprises. ";
 }
 
-//Check the status of your wallet, whether it is whitelisted or not by calling checkWhitelistStatus method
+//Function to check the status of your wallet, whitelisted or not.
 
 export function checkWhitelistStatus () :string {
 
@@ -57,12 +57,13 @@ export function getListOfWhitelistedAddresses (): Array<string> {
 }
 
 
+//Funtctions to get 2X rewards after getting in the whitelist.
 
 export function claimRewards (receiver:string = context.sender):string {
 
   waitThirtyDays();
 
-  assert(whitelistedAddresses.has(context.sender), "You are not whitelisted! Only early supporters interacted with smart conract gets rewarded!")
+  assert(whitelistedAddresses.has(context.sender), "You are not whitelisted! Only whitelisted ones can call this function")
   assert(rewardedWallets.has(receiver) == false, "You have already received your reward! but nice try btw.");
 
   // Send 0.2 NEAR to everyone who has interacted with the smart contract and got whitelisted.
@@ -70,7 +71,7 @@ export function claimRewards (receiver:string = context.sender):string {
   ContractPromiseBatch.create(receiver).transfer(u128.from('200000000000000000000000'));
   rewardedWallets.add(receiver);
 
-  return receiver + " has been rewaded 0.2 NEAR for interaction with the smart contract and support us to make e debut!"
+  return receiver + " has been rewaded 0.2 NEAR for interaction with the smart contract and your early support!"
 
 }
 
@@ -80,6 +81,6 @@ export function claimRewards (receiver:string = context.sender):string {
 
 export function waitThirtyDays ():void {
 
-  assert(context.blockTimestamp >= deployTimeStamp_nanoSeconds + stakingPeriod_in_nanosec, "You need to wait 30 days to get your rewards after interaction with the contract.");
+  assert(context.blockTimestamp >= deployTimeStamp_nanoSeconds + stakingPeriod_in_nanosec, "Please waith 30 days to get your rewards");
 }
 
