@@ -11,9 +11,10 @@ The purpose of the project is to whitelist the users who have interacted with ou
    Everyone interacted with dapp will receive 2 NEAR when whitelist period is over.
    User need to wait 30 days after the before they can call getRewards method to get their rewards.
 
-#### Patika.dev session for this prject is : 
 
-https://app.patika.dev/courses/near-developer-course/submit-your-project-plan
+   ## Loom video to explain my smart contracts: 
+
+   https://www.loom.com/share/4ef380fbbab54e029de6fa6f8db5fde5
 
 
 ### Getting started
@@ -92,4 +93,7 @@ If user is already in the whitelist smart contact raises an error.
 
 run `./scripts/3.cleanup.sh`
 
-Loom video link will be added here when recorded.
+
+#### Patika.dev session for this prject is : 
+
+https://app.patika.dev/courses/near-developer-course/submit-your-project-plan
