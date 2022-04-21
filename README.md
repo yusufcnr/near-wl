@@ -25,6 +25,7 @@ https://wallet.testnet.near.org/
 ## install npm
 
 `sudo apt install npm`
+
 `npm -v`
 
 ## install dependencies from packacge.json file like this: (Reuire yarn installed)
