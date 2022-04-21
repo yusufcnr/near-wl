@@ -1,7 +1,7 @@
 # Near Protocol Whitelist dApp WHIT3
 Welcome!
-    This small project is written in Assemblyscript using Near Protocol Sample project. 
-The purpose of the project is to whitelist the users who have interacted with our decentelized application on NEAR protocol for their early support.
+    This smart contract is written in Assemblyscript using Near Protocol Sample project. 
+The purpose of the project is to whitelist the users who have interacted with our decentralized application on NEAR protocol for their early support.
 
    Anyone can interact with the project by attaching 0.1 NEAR. 
    Maximum number of the whitelisted wallets is limited to 10.
