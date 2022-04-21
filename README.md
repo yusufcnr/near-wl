@@ -97,9 +97,4 @@ If user is already in the whitelist smart contact raises an error.
 
 run `./scripts/3.cleanup.sh`
 
-
-## get name of the contract by calling getContractName
-
-`near call $CONTRACT getContractName --accountId <YOUR_ACCOUNT.testnet>`
-
 Loom video link will be added here when recorded.

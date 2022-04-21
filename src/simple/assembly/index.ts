@@ -83,11 +83,3 @@ export function waitThirtyDays ():void {
   assert(context.blockTimestamp >= deployTimeStamp_nanoSeconds + stakingPeriod_in_nanosec, "You need to wait 30 days to get your rewards after interaction with the contract.");
 }
 
-
-
-//This method can be used to retrieve the name of the contract that is deployed to the blockchain.
-
-export function getContractName ():string {
-  return context.contractName;
-}
-
