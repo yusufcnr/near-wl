@@ -59,10 +59,6 @@ or basically run 1.dev-deploy.sh script like this:
 
 `./scripts/1.dev-deploy.sh`
 
-6. run `./scripts/2.use-contract.sh`
-
-7. run `./scripts/2.use-contract.sh` (run it to see changes)
-
 ## Usage
 
 ## Interacting with smart contract
@@ -90,6 +86,17 @@ If user is already in the whitelist smart contact raises an error.
 ### Anyone interacted with contract can call the method to claim their rewards after the whitelising process is over and 30 days later.
 
 `near call $CONTRACT claimRewards --accountId <YOUR_ACCOUNT.testnet>`
+
+### If you want to make all methods to be called automatically you can use following script.
+1. run `./scripts/2.use-contract.sh`
+
+2. run `./scripts/2.use-contract.sh` (run it to see changes)
+
+
+### Use following script to delete smart contract and tranfer all the funds to the predefined BENEFICIARY account.
+
+run `./scripts/3.cleanup.sh`
+
 
 ## get name of the contract by calling getContractName
 
