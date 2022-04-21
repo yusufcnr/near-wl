@@ -1,4 +1,5 @@
 # Near Protocol Whitelist dApp WHIT3
+
 Welcome!
     This smart contract is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentralized application on NEAR protocol for their early support.
@@ -12,12 +13,19 @@ The purpose of the project is to whitelist the users who have interacted with ou
 
 https://app.patika.dev/courses/near-developer-course/submit-your-project-plan
 
+
 ### Getting started
 Before getting started we need to get a testnet account from Near Protocol in order to interact smart contracts.
 
 ### Get Near Protocol Testnet Account from:
 
 https://wallet.testnet.near.org/
+
+
+## install npm
+
+`sudo apt install npm`
+`npm -v`
 
 ## install dependencies from packacge.json file like this: (Reuire yarn installed)
 
