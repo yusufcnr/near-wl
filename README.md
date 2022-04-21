@@ -71,6 +71,9 @@ Run this command to interact with smart contract:
 
 `near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT.testnet>`
 
+If user is already in the whitelist smart contact raises an error. 
+'Smart contract panicked: You have already interacted with our smart conract! there is nothing to do now. just wait for future surprises'
+
 ## Check whether you are whitelisted or not:
 
 `near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
@@ -78,6 +81,7 @@ Run this command to interact with smart contract:
 ## Check number of whitelisted addresses:
 
 `near call $CONTRACT checkWhitelistStatus --accountId <YOUR_ACCOUNT.testnet>`
+
 ## Retrieve the list of whitelisted addresses:
 
 `near view $CONTRACT getListOfWhitelistedAddresses --accountId <YOUR_ACCOUNT.testnet>`
