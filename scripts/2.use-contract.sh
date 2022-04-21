@@ -21,6 +21,8 @@ echo "Call getListOfWhitelistedAddresses method in order to see the current whit
 echo
 near view $CONTRACT getListOfWhitelistedAddresses
 
+sleep 5
+
 echo
 echo "call getNumberOfList method to see the number of users already whitelisted."
 echo
@@ -29,6 +31,7 @@ near view $CONTRACT getNumberOfList
 echo ---------------------------------------------------------
 echo
 
+sleep 5
 
 echo
 echo
@@ -39,9 +42,13 @@ echo "call interact method to interact with smart contract in order to get in th
 
 echo "make sure to attach 0.1 NEAR < --amount 0.1 >" 
 
+sleep 5
 
 near call $CONTRACT interact  --amount 0.1 --accountId $CONTRACT
 
 echo
 echo "now run this script again to see changes made by this file"
+
+sleep 5
+
 exit 0
