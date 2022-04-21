@@ -1,6 +1,6 @@
+
 import { ContractPromiseBatch, context, u128, PersistentSet } from "near-sdk-as";
 
-// const whitelistedAddresses = new PersistentUnorderedMap<string,boolean>("whitelist");
 const whitelistedAddresses = new PersistentSet<string>("wl");
 const rewardedWallets = new PersistentSet<string>("rw")
 
