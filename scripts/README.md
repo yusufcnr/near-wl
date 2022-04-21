@@ -34,7 +34,7 @@ It uses the following setup:
   ```sh
   1.dev-deploy.sh                # helper: build and deploy contracts
   2.use-contract.sh              # helper: call methods on ContractPromise
-  3.cleanup.sh                   # helper: delete build and deploy artifacts
+
   ```
 
 ### Terminal **B**
