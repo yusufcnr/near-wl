@@ -6,10 +6,10 @@ Welcome!
     This smart contract is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentralized application on NEAR protocol for their early support.
 
-   Anyone can interact with the project by attaching 1 NEAR. 
-   Maximum number of the whitelisted wallets is limited to 10.
+   Anyone can interact with the smart contract by attaching 1 NEAR. 
+   Maximum number of the whitelisted wallets is limited to 100.
    Everyone interacted with dapp will receive 2 NEAR when whitelist period is over.
-   User need to wait 30 days after the before they can call getRewards method to get their rewards.
+   User need to wait 30 days before they can call getRewards method to get their rewards.
 
 
    ## Loom video to explain my smart contracts: 
