@@ -24,7 +24,7 @@ assert(whitelistedAddresses.has(context.sender) == false, "You have already inte
 
 
 //Ask users to attach 1 NEAR to our contract in order to get whitelisted.
-assert(context.attachedDeposit == u128.from('1000000000000000000000000'), "Please attach 0.1 NEAR to interact and to get in WL"); 
+assert(context.attachedDeposit == u128.from('1000000000000000000000000'), "Please attach 1 NEAR to interact and to get in WL"); 
 
 //Add user to the whitelist
 whitelistedAddresses.add(context.sender);

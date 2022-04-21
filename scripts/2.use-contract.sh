@@ -18,6 +18,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Call 'view' functions on the contract"
 echo
 echo "Call getListOfWhitelistedAddresses method in order to see the current whitelisted users."
+
 echo
 near view $CONTRACT getListOfWhitelistedAddresses
 

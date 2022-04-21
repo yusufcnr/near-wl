@@ -20,6 +20,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Delete $CONTRACT, setting $BENEFICIARY as beneficiary"
 echo ---------------------------------------------------------
 echo
+
 near delete $CONTRACT $BENEFICIARY
 
 echo
