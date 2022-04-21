@@ -6,9 +6,9 @@ Welcome!
     This smart contract is written in Assemblyscript using Near Protocol Sample project. 
 The purpose of the project is to whitelist the users who have interacted with our decentralized application on NEAR protocol for their early support.
 
-   Anyone can interact with the project by attaching 0.1 NEAR. 
+   Anyone can interact with the project by attaching 1 NEAR. 
    Maximum number of the whitelisted wallets is limited to 10.
-   Everyone interacted with dapp will receive 0.2 when whitelist period is over.
+   Everyone interacted with dapp will receive 2 NEAR when whitelist period is over.
    User need to wait 30 days after the before they can call getRewards method to get their rewards.
 
 #### Patika.dev session for this prject is : 
@@ -58,7 +58,7 @@ or basically run 1.dev-deploy.sh script like this:
 
 ## Interacting with smart contract
 
-Interacting with smart contract requires user to attach 0.1 NEAR in order to get in the whitelist.
+Interacting with smart contract requires user to attach 1 NEAR in order to get in the whitelist.
 Run this command to interact with smart contract:
 
 `near call $CONTRACT interact --amount 0.1 --accountId <YOUR_ACCOUNT.testnet>`

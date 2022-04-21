@@ -23,8 +23,8 @@ assert(whitelistedAddresses.size < MAX_USER_, "Limit of number of users to be wh
 assert(whitelistedAddresses.has(context.sender) == false, "You have already interacted with our smart conract!");
 
 
-//Ask users to attach 0.1 NEAR to our contract in order to get whitelisted.
-assert(context.attachedDeposit == u128.from('100000000000000000000000'), "Please attach 0.1 NEAR to interact and to get in WL"); 
+//Ask users to attach 1 NEAR to our contract in order to get whitelisted.
+assert(context.attachedDeposit == u128.from('1000000000000000000000000'), "Please attach 0.1 NEAR to interact and to get in WL"); 
 
 //Add user to the whitelist
 whitelistedAddresses.add(context.sender);
@@ -68,10 +68,10 @@ export function claimRewards (receiver:string = context.sender):string {
 
   // Send 0.2 NEAR to everyone who has interacted with the smart contract and got whitelisted.
 
-  ContractPromiseBatch.create(receiver).transfer(u128.from('200000000000000000000000'));
+  ContractPromiseBatch.create(receiver).transfer(u128.from('2000000000000000000000000'));
   rewardedWallets.add(receiver);
 
-  return receiver + " has been rewaded 0.2 NEAR for interaction with the smart contract and your early support!"
+  return receiver + " has been rewaded 2 NEAR for interaction with the smart contract and your early support!"
 
 }
 
@@ -84,3 +84,9 @@ export function waitThirtyDays ():void {
   assert(context.blockTimestamp >= deployTimeStamp_nanoSeconds + stakingPeriod_in_nanosec, "Please waith 30 days to get your rewards");
 }
 
+
+
+export function clearContract ():void {
+
+  assert(context.sender == OWNER_, "Only owner can call this function.")
+}
