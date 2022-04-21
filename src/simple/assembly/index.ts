@@ -85,8 +85,3 @@ export function waitThirtyDays ():void {
 }
 
 
-
-export function clearContract ():void {
-
-  assert(context.sender == OWNER_, "Only owner can call this function.")
-}
