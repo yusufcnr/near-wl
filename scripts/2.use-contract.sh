@@ -65,7 +65,7 @@ echo "now run this script again to see changes made by this file"
 sleep 5
 
 
-echo    "uncomment followint command to get your rewards after completing 30 days."
+echo    "uncomment following command and run this scrpits again to get your rewards after completing 30 days."
 
-near call $CONTRACT claimRewards --accountId $CONTRACT
+# near call $CONTRACT claimRewards --accountId $CONTRACT
 exit 0

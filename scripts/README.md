@@ -43,6 +43,7 @@ It uses the following setup:
 - Environment
   ```sh
   export CONTRACT=               # depends on deployment
+  export BENEFICIARY =          #Any account you control
 
   # for example
   # export CONTRACT=dev-1615190770786-2702449
@@ -62,10 +63,6 @@ It uses the following setup:
 
 In order to delete the deployed contract and transfer its fund to the BENEFICIARY account;
 firts define a BENEFICIARY variable and then run 3.cleanup sh scripts.
-
-Define a BENEFICIARY account with you can 
-
-export BENEFICIARY=<yourAccount.testnet>               # Creat a BENEFICIARY account
 
 near delete $CONTRACT $BENEFICIARY
 
