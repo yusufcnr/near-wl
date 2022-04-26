@@ -21,11 +21,11 @@ It uses the following setup:
 - Environment
   ```sh
   export CONTRACT=        # depends on deployment
-  export OWNER=           # any account you control
+  export BENEFICIARY=           # any account you control
 
   # for example
   # export CONTRACT=dev-1615190770786-2702449
-  # export OWNER=sherif.testnet
+  # export BENEFICIARY=yusufcinar.testnet
   ```
 
 - Commands
@@ -34,7 +34,7 @@ It uses the following setup:
   ```sh
   1.dev-deploy.sh                # helper: build and deploy contracts
   2.use-contract.sh              # helper: call methods on ContractPromise
-
+  3.cleanup.sh                   # helper: delete deployed contract and transfer fund to account you control.
   ```
 
 ### Terminal **B**
@@ -53,8 +53,21 @@ It uses the following setup:
   # monitor contract storage using near-account-utils
   # https://github.com/near-examples/near-account-utils
   watch -d -n 1 yarn storage $CONTRACT
+
   ```
 ---
+
+
+### Cleanup Script
+
+In order to delete the deployed contract and transfer its fund to the BENEFICIARY account;
+firts define a BENEFICIARY variable and then run 3.cleanup sh scripts.
+
+Define a BENEFICIARY account with you can 
+
+export BENEFICIARY=<yourAccount.testnet>               # Creat a BENEFICIARY account
+
+near delete $CONTRACT $BENEFICIARY
 
 ## OS Support
 
