@@ -73,7 +73,7 @@ export function claimRewards (receiver:string = context.sender):string {
   ContractPromiseBatch.create(receiver).transfer(u128.from('2000000000000000000000000'));
   rewardedWallets.add(receiver);
 
-  return receiver + " has been rewaded 2 NEAR for interaction with the smart contract and your early support!"
+  return receiver + " has been rewarded 2 NEAR for interaction with the smart contract and your early support!"
 
 }
 
