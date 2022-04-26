@@ -41,7 +41,7 @@ echo "Step 2: Call 'change' functions on the contract"
 echo ---------------------------------------------------------
 echo "call interact method to interact with smart contract in order to get in the whitelist. "
 
-echo "make sure to attach 0.1 NEAR < --amount 0.1 >" 
+echo "make sure to attach 1 NEAR < --amount 1 >" 
 
 sleep 5
 
@@ -51,5 +51,4 @@ echo
 echo "now run this script again to see changes made by this file"
 
 sleep 5
-
 exit 0
