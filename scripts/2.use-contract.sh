@@ -27,7 +27,13 @@ sleep 5
 echo
 echo "call getNumberOfList method to see the number of users already whitelisted."
 echo
+
+echo
+echo "number of the whiletsted addresses is : "
+
 near view $CONTRACT getNumberOfList
+
+
 
 echo ---------------------------------------------------------
 echo
