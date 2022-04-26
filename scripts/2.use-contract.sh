@@ -45,7 +45,7 @@ echo "make sure to attach 0.1 NEAR < --amount 0.1 >"
 
 sleep 5
 
-near call $CONTRACT interact  --amount 0.1 --accountId $CONTRACT
+near call $CONTRACT interact  --amount 1 --accountId $CONTRACT
 
 echo
 echo "now run this script again to see changes made by this file"
