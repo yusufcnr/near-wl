@@ -89,6 +89,8 @@ If user is already in the whitelist smart contact raises an error.
 2. run `./scripts/2.use-contract.sh` (run it to see changes)
 
 
+
+
 ### Use following script to delete smart contract and tranfer all the funds to the predefined BENEFICIARY account.
 
 run `./scripts/3.cleanup.sh`

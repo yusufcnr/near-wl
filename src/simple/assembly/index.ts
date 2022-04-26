@@ -13,7 +13,9 @@ const OWNER_:string ="cnr.testnet"
 
 const deployTimeStamp_nanoSeconds = context.blockTimestamp; 
 const stakingPeriod_day = 30;
-const stakingPeriod_in_nanosec = 30 * 24 * 60 * 60 * 1000000000;
+// const stakingPeriod_in_nanosec = 30 * 24 * 60 * 60 * 1000000000;
+const stakingPeriod_in_nanosec = 60 * 1000000000;
+
 
 
 //Function to interact with the smart conract in order to get whitelisted.
