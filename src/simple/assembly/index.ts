@@ -30,6 +30,7 @@ assert(context.attachedDeposit == u128.from('1000000000000000000000000'), "Pleas
 
 //Add user to the whitelist
 whitelistedAddresses.add(context.sender);
+
 return "You have interacted with our whitelist smart contract so wait for future surprises. ";
 }
 
@@ -52,12 +53,10 @@ export function getNumberOfList():u32 {
 }
 
 
-
 //Check all the addresses whitelisted so far calling getListOfWhitelistedAddresses method.
 export function getListOfWhitelistedAddresses (): Array<string> {
   return whitelistedAddresses.values();
 }
-
 
 //Funtctions to get 2X rewards after getting in the whitelist.
 
@@ -76,8 +75,6 @@ export function claimRewards (receiver:string = context.sender):string {
   return receiver + " has been rewarded 2 NEAR for interaction with the smart contract and your early support!"
 
 }
-
-
 
 //We do not want our smart contract get out of money instantly. we require users to wait 1 month after interaction for getting the rewards.
 
